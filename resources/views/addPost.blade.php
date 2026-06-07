@@ -77,6 +77,15 @@
                                         @if($post->status_name != 'published')
                                         <a href="{{ route('posts.edit-form', $post->id) }}" class="bi bi-pencil-square custom-icon"></a>
                                         @endif
+                                        <form action = "{{route('post.delete', $post->id)}}"
+                                        method = 'post'class="flex d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type = "submit" class="btn btn-link">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </form>
+                                        
                                     </td>
                                 </tr>
                                 @endforeach

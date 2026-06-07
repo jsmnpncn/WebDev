@@ -41,11 +41,32 @@ class PostController extends Controller
         $post = DB::table('post')->where('id', $id)->first();
         $statuses = DB::table('statuses')->get();
 
+        $post = DB::table('post')->where('id', $id)->update([
+
+        ]);
+
         return view('edit', compact('post', 'statuses'));
     }
 
-    public function editSubmit(){
+    public function editSubmit(Request $request, $id){
+        return redirect('post');
     
+    }
+
+    public function deletePost($id){
+        DB::table('posts')
+        ->where('id', $id)
+        ->delete();
+    }
+
+    public function searchPosts(Request $request){
+    $posts = DB::table('post')
+    ->where('title', 'like', '%{$request->param}$')
+    ->orWhere('description', 'like', '%{$request->param}$')
+    ->get();
+    $statuses = DB::table('statuses')->get();
+
+    return view('posts', compact('posts', 'statuses'));
     }
 
 }

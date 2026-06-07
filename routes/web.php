@@ -37,7 +37,12 @@ Route::group(['prefix' => 'addPost'], function(){
 
     Route::get('edit/{id}', [PostController::class, 'editForm'])->name('posts.edit-form');
     Route::post('edit/{id}', [PostController::class, 'editSubmit'])->name('posts.edit-submit');
+
+    Route::delete('/', [PostController::class, 'deletePost'])->name('posts.delete');
 });
+
+//searchPost
+Route::get('search/{param}', [PostController::class, 'searchPost'])->name('searchPost');
 
 //Fallback
 Route::fallback([UserController::class, 'fallback']);
