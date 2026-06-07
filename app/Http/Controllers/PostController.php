@@ -41,32 +41,39 @@ class PostController extends Controller
         $post = DB::table('post')->where('id', $id)->first();
         $statuses = DB::table('statuses')->get();
 
-        $post = DB::table('post')->where('id', $id)->update([
-
-        ]);
-
         return view('edit', compact('post', 'statuses'));
     }
 
     public function editSubmit(Request $request, $id){
-        return redirect('post');
+        DB::table('post')->where('id', $id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'status' => $request->status,
+            'created_at' => now(),
+        ]);
+
+        return redirect('/addPost');
     
     }
 
     public function deletePost($id){
-        DB::table('posts')
+        DB::table('post')
         ->where('id', $id)
         ->delete();
+
+        return redirect('/addPost');
     }
 
-    public function searchPosts(Request $request){
+    public function searchPost(Request $request){
     $posts = DB::table('post')
-    ->where('title', 'like', '%{$request->param}$')
-    ->orWhere('description', 'like', '%{$request->param}$')
+    ->leftJoin('statuses', 'post.status', '=', 'statuses.id')
+    ->select('post.*', 'statuses.display_name as status_display_name', 'statuses.name as status_name')
+    ->where('title', 'like', "%{$request->param}%")
+    ->orWhere('description', 'like', "%{$request->param}$")
     ->get();
     $statuses = DB::table('statuses')->get();
 
-    return view('posts', compact('posts', 'statuses'));
+    return view('addPost', compact('posts', 'statuses'));
     }
 
 }

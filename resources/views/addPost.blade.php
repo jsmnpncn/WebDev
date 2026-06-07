@@ -44,7 +44,7 @@
                         Submit
                         </button>
                     </form>
-                </div>
+                </div> 
             </div>
         </div>
         <div class = "col-lg-8">
@@ -53,6 +53,22 @@
                     COMMUNITY POSTS
                 </div>
                 <div class = "card-body">
+
+                <div class="navbar p-0 mb-3"> <div class="container-fluid p-0">
+                    <form class="d-flex w-100" role="search" action="/search" method="GET">
+                        <input class="form-control me-2"
+                        type="search"
+                        name="param"
+                        placeholder="Is pandesal a sexuality or a breed"
+                        aria-label="Search"
+                        value="{{ request('param') }}"
+                        />
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </form>
+                </div>
+                </div>
                     <div class = "table-responsive">
                         <table class = "table glass-table align-middle text-center">
                             <thead class="custom-table-head">
@@ -77,11 +93,11 @@
                                         @if($post->status_name != 'published')
                                         <a href="{{ route('posts.edit-form', $post->id) }}" class="bi bi-pencil-square custom-icon"></a>
                                         @endif
-                                        <form action = "{{route('post.delete', $post->id)}}"
-                                        method = 'post'class="flex d-inline">
+                                        <form action = "{{route('posts.delete', $post->id)}}"
+                                        method = "POST" class="flex d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type = "submit" class="btn btn-link">
+                                            <button type = "submit" class="custom-delete-btn">
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </form>
@@ -149,5 +165,12 @@
 
     .custom-icon{
         color: #020259 !important;
+    }
+
+    .custom-delete-btn{
+        background: none;
+        color: #721c24 !important;
+        border: none;
+
     }
 </style>
