@@ -59,7 +59,7 @@
                         <input class="form-control me-2"
                         type="search"
                         name="param"
-                        placeholder="Is pandesal a sexuality or a breed"
+                        placeholder="Is pandesal a sexuality or a breed?"
                         aria-label="Search"
                         value="{{ request('param') }}"
                         />
