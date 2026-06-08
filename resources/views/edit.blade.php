@@ -16,6 +16,7 @@
                         type="text"
                         class="form-control"
                         name="title"
+                        placeholder="⋆ ˚｡⋆₍ᐢ. ༝ .ᐢ₎⋆ ˚｡⋆"
                         value="{{ $post->title }}"
                     >
                 </div>
@@ -25,6 +26,7 @@
                         class="form-control"
                         rows="6"
                         name="description"
+                        placeholder="i love miffy sm idk what to do. save me, miffy, save me"
                     >{{ $post->description }}</textarea>
                 </div>
                 <div class="mb-4">
@@ -51,7 +53,7 @@
 
 <style>
     .custom-header{
-        background-color: #47230f;
+        background-color: #341f1a;
         border-radius: 12;
         color: #a2b9d5;
         font-family: 'Comic Neue', cursive;
@@ -72,13 +74,17 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         font-weight: 600;
-        color: #45271a;
+        color: #341f1a;
         letter-spacing: 0.5px;
     }
 
     .btn-primary{
         background-color: #020259 !important;
         border-color: #020259 !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px !important;
+        font-size: 16px !important;
     }
 
 </style>

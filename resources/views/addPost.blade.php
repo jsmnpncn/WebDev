@@ -18,6 +18,7 @@
                             type = "text"
                             class = "form-control"
                             name = "title"
+                            placeholder="Title... meta pa ba ang F1?"
                             >
                         </div>
                         <div class = "mb-3">
@@ -25,6 +26,7 @@
                             <textarea
                             class="form-control"
                             rows="6"
+                            placeholder="Lorem... me na lang ba ang babaeng nanonood ng F1 at ayaw kay stroll? haha"
                             name="description"
                             ></textarea>
                         </div>
@@ -56,7 +58,7 @@
 
                 <div class="navbar p-0 mb-3"> <div class="container-fluid p-0">
                     <form class="d-flex w-100" role="search" action="/search" method="GET">
-                        <input class="form-control me-2"
+                        <input class="form-control form-control-lg me-2"
                         type="search"
                         name="param"
                         placeholder="Is pandesal a sexuality or a breed?"
@@ -117,7 +119,7 @@
 
 <style>
     .custom-header{
-        background-color: #47230f;
+        background-color: #341f1a;
         border-radius: 12;
         color: #a2b9d5;
         font-family: 'Comic Neue', cursive;
@@ -135,8 +137,8 @@
     }
 
     .custom-table-head th{
-        background-color: #4b2e21;
-        color: #47230f !important;
+        background-color: #341f1a;
+        color: #341f1a !important;
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         letter-spacing: 1px;
@@ -146,13 +148,17 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         font-weight: 600;
-        color: #45271a;
+        color: #341f1a;
         letter-spacing: 0.5px;
     }
 
     .btn-primary{
         background-color: #020259 !important;
         border-color: #020259 !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.5px !important;
+        font-size: 16px !important;
     }
 
     .custom-warning{

@@ -6,8 +6,8 @@
     .custom-footer{
         background-color: #020259;
         font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 400;
         letter-spacing: 1px;
         color: #f2f2e2
     }

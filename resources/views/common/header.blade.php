@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-lg custom-navbar">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Starlite</a>
+        <a class="navbar-brand" href="#">
+            <img src="{{ asset('logo_miffy.png') }}" alt="Starlite Logo" height="42" class="d-inline-block align-top">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,42 +10,43 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Bleep</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Malcolm Tod !?
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Extra</a></li>
-                <li><a class="dropdown-item" href="#">Extra 2x</a></li>
-                <li><a class="dropdown-item" href="#">Read all about it</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Malcolm's in his feelings</a></li>
-                <li><a class="dropdown-item" href="#">... and he can't get out of it</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Bleep</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Malcolm Todd !?
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Extra</a></li>
+                        <li><a class="dropdown-item" href="#">Extra 2x</a></li>
+                        <li><a class="dropdown-item" href="#">Read all about it</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Malcolm's in his feelings</a></li>
+                        <li><a class="dropdown-item" href="#">... and he can't get out of it</a></li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        </ul>
-            <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="iz ditto da best?" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
+
+            <form class="d-flex align-items-center mb-0">
+                <input class="form-control me-2" type="search" placeholder="miffy ⋆" aria-label="Search">
+                <button class="btn" type="submit">Search</button>
+            </form>
+        </div>
     </div>
 </nav>
 
 <style>
     .custom-navbar{
-    background-color: #020259;
-    font-family: 'Montserrat', sans-serif;
-}
+        background-color: #020259;
+        font-family: 'Montserrat', sans-serif;
+    }
 
-    .custom-navbar .navbar-brand,
     .custom-navbar .nav-link{
         color: #f2f2e2 !important;
+        font-weight: 500 !important;
     }
 
     .custom-navbar .nav-link:hover{
@@ -55,12 +58,13 @@
     }
 
     .custom-navbar .btn{
-        background-color: #f2f2e2;
+        background-color: #a2b9d5;
         border: none;
         color: #020259;
+        font-weight: bold;
     }
 
     .custom-navbar .btn:hover{
-        background-color: #a2b9d5;
+        background-color: #f2f2e2;
     }
 </style>
