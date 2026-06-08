@@ -53,7 +53,6 @@ class PostController extends Controller
         ]);
 
         return redirect('/addPost');
-    
     }
 
     public function deletePost($id){

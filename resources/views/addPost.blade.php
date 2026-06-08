@@ -55,7 +55,6 @@
                     COMMUNITY POSTS
                 </div>
                 <div class = "card-body">
-
                 <div class="navbar p-0 mb-3"> <div class="container-fluid p-0">
                     <form class="d-flex w-100" role="search" action="/search" method="GET">
                         <input class="form-control form-control-lg me-2"
@@ -103,7 +102,6 @@
                                                 <i class="bi bi-trash"></i>
                                             </button>
                                         </form>
-                                        
                                     </td>
                                 </tr>
                                 @endforeach
